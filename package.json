@@ -1,15 +1,16 @@
 {
   "name": "generator-pymod",
-  "version": "0.0.0",
-  "description": "A generator for Yeoman",
+  "version": "0.0.1",
+  "description": "A generator for Yeoman to stub out Python module",
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator",
+    "python"
   ],
   "homepage": "https://github.com/craigbeck/generator-pymod",
   "bugs": "https://github.com/craigbeck/generator-pymod/issues",
   "author": {
     "name": "Craig Beck",
-    "email": "",
+    "email": "luckybonza@gmail.com",
     "url": "https://github.com/craigbeck"
   },
   "main": "app/index.js",

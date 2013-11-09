@@ -1,7 +1,8 @@
-# generator-pymod [![Build Status](https://secure.travis-ci.org/craigbeck/generator-pymod.png?branch=master)](https://travis-ci.org/craigbeck/generator-pymod)
+# generator-pymod 
 
-A generator for [Yeoman](http://yeoman.io).
+[![Build Status](https://secure.travis-ci.org/craigbeck/generator-pymod.png?branch=master)](https://travis-ci.org/craigbeck/generator-pymod)
 
+A generator for [Yeoman](http://yeoman.io) to create Pyton module boilerplate.
 
 ## Getting Started
 

@@ -1,7 +1,7 @@
 {
   "name": "generator-pymod",
-  "version": "0.0.1",
-  "description": "A generator for Yeoman to stub out Python module",
+  "version": "0.0.2",
+  "description": "A generator for Yeoman to create Python module boilerplate",
   "keywords": [
     "yeoman-generator",
     "python"

@@ -24,9 +24,15 @@ describe('pymod generator', function () {
       // add files you expect to exist here.
       '.editorconfig',
       'setup.py',
-      'main.py'
+      'README.md',
+      'my-mod/__init__.py',
+      'my-mod/__main__.py'
     ];
 
+    helpers.mockPrompt(this.app, {
+      'moduleName': 'my-mod',
+      'description': 'pymod test run'
+    });
     this.app.options['skip-install'] = true;
     this.app.run({}, function () {
       helpers.assertFiles(expected);

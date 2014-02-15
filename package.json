@@ -1,10 +1,17 @@
 {
   "name": "generator-pymod",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "A generator for Yeoman to create Python module boilerplate",
   "keywords": [
+    "alembic",
+    "cli",
+    "development",
+    "generator",
+    "python",
+    "tool",
+    "yeoman",
     "yeoman-generator",
-    "python"
+    "yo"
   ],
   "homepage": "https://github.com/craigbeck/generator-pymod",
   "bugs": "https://github.com/craigbeck/generator-pymod/issues",
@@ -22,7 +29,8 @@
     "test": "mocha"
   },
   "dependencies": {
-    "yeoman-generator": "~0.13.0"
+    "yeoman-generator": "~0.13.0",
+    "lodash": "~2.4.1"
   },
   "devDependencies": {
     "mocha": "~1.12.0"

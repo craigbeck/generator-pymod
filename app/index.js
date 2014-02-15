@@ -3,6 +3,7 @@ var util = require('util');
 var path = require('path');
 var yeoman = require('yeoman-generator');
 var _ = require('lodash');
+var cc = require('change-case');
 
 
 var PymodGenerator = module.exports = function PymodGenerator(args, options, config) {
@@ -80,6 +81,7 @@ PymodGenerator.prototype.askFor = function askFor() {
     this.useFlaskLogin = props.useFlaskLogin;
     this.useSqlAlchemy = props.useSqlAlchemy;
 
+    this.className = cc.upperCaseFirst(cc.camelCase(this.moduleName));
     var deps = _.filter((props.otherPyDeps ? props.otherPyDeps.split(' ') : []), 'length');
 
     this.pythonDeps = deps;

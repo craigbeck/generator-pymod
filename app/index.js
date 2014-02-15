@@ -43,6 +43,11 @@ PymodGenerator.prototype.askFor = function askFor() {
     name: 'description',
     message: 'description for this module?'
   }, {
+    name: 'useAlembic',
+    message: 'use Alembic migrations?',
+    type: 'confirm',
+    default: false
+  }, {
     name: 'useFlask',
     message: 'use Flask (includes Flask-RESTful)?',
     type: 'confirm',
@@ -69,6 +74,7 @@ PymodGenerator.prototype.askFor = function askFor() {
     this.moduleName = props.moduleName;
     this.modulePath = props.modulePath;
     this.description = props.description;
+    this.useAlembic = props.useAlembic;
     this.useFlask = props.useFlask;
     this.useAngular = props.useAngular;
     this.useFlaskLogin = props.useFlaskLogin;
@@ -112,6 +118,17 @@ PymodGenerator.prototype.app = function app() {
 PymodGenerator.prototype.projectfiles = function projectfiles() {
   this.copy('editorconfig', '.editorconfig');
 };
+
+PymodGenerator.prototype.alembic = function alembic() {
+  if (this.useAlembic) {
+    var alembicDir = path.join(this.appPath, 'alembic');
+    this.mkdir(alembicDir);
+    this.mkdir(path.join(alembicDir, 'versions'));
+    this.template('alembic/_alembic.ini', path.join(alembicDir, 'alembic.ini'));
+    this.template('alembic/_README.md', path.join(alembicDir, 'README.md'));
+    this.template('alembic/_schema.py', path.join(this.appPath, 'schema.py'));
+  }
+}
 
 PymodGenerator.prototype.flask = function flask() {
   if (this.useFlask) {
